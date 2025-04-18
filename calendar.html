@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sacred Calendar - Shiva Shakti Ashram</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/calendar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Sanskrit:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-particles" id="particles"></div>
+    
+    <header>
+        <div class="language-toggle">
+            <button class="active" data-lang="en">EN</button>
+            <button data-lang="np">NP</button>
+        </div>
+        
+        <div class="theme-toggle">
+            <i class="fas fa-moon"></i>
+            <i class="fas fa-sun"></i>
+            <div class="toggle-ball"></div>
+        </div>
+        
+        <div class="logo">
+            <img src="../logo.jpg" alt="Shiva Shakti Ashram Logo">
+            <h1>Shiva Shakti Ashram</h1>
+        </div>
+        
+        <nav>
+            <ul>
+                <li><a href="../index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="about.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+                <li><a href="goal.html"><i class="fas fa-bullseye"></i> Our Goal</a></li>
+                <li><a href="programs.html"><i class="fas fa-calendar-alt"></i> Programs</a></li>
+                <li><a href="horoscope.html"><i class="fas fa-star"></i> Horoscope</a></li>
+                <li><a href="calendar.html" class="active"><i class="fas fa-calendar-day"></i> Calendar</a></li>
+                <li><a href="gallery.html"><i class="fas fa-images"></i> Gallery</a></li>
+                <li><a href="news.html"><i class="fas fa-newspaper"></i> News</a></li>
+                <li><a href="contact.html"><i class="fas fa-phone"></i> Contact</a></li>
+                <li><a href="donate.html" class="donate-btn"><i class="fas fa-heart"></i> Donate</a></li>
+            </ul>
+            <div class="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-banner">
+            <div class="banner-content">
+                <h1 class="sanskrit-heading">पञ्चाङ्ग</h1>
+                <h2>Sacred Calendar</h2>
+            </div>
+        </section>
+
+        <section class="calendar-intro">
+            <div class="container">
+                <h2 class="section-title">Auspicious Days & Events</h2>
+                <p class="intro-text">The Hindu calendar is aligned with lunar cycles and cosmic energies, marking certain days as especially sacred. At Shiva Shakti Ashram, we observe these auspicious dates with special ceremonies, meditations, and teachings. Plan your visit to coincide with these powerful days to deepen your spiritual experience.</p>
+            </div>
+        </section>
+
+        <section class="calendar-wrapper">
+            <div class="container">
+                <div class="calendar-controls">
+                    <div class="month-selector">
+                        <button id="prev-month" class="month-btn"><i class="fas fa-chevron-left"></i></button>
+                        <h3 id="current-month-display">April 2025</h3>
+                        <button id="next-month" class="month-btn"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                    <div class="calendar-view-toggle">
+                        <button class="view-btn active" data-view="month">Monthly View</button>
+                        <button class="view-btn" data-view="list">List View</button>
+                    </div>
+                </div>
+
+                <div class="calendar-view month-view active">
+                    <div class="calendar-grid">
+                        <div class="weekday-header">Sunday</div>
+                        <div class="weekday-header">Monday</div>
+                        <div class="weekday-header">Tuesday</div>
+                        <div class="weekday-header">Wednesday</div>
+                        <div class="weekday-header">Thursday</div>
+                        <div class="weekday-header">Friday</div>
+                        <div class="weekday-header">Saturday</div>
+                        
+                        <!-- Calendar days will be populated by JavaScript -->
+                        <div id="calendar-days"></div>
+                    </div>
+                </div>
+
+                <div class="calendar-view list-view">
+                    <div class="events-list" id="events-list">
+                        <!-- Events list will be populated by JavaScript -->
+                    </div>
+                </div>
+                
+                <div class="calendar-legend">
+                    <div class="legend-item">
+                        <span class="legend-color festival"></span>
+                        <span class="legend-label">Major Festivals</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-color ritual"></span>
+                        <span class="legend-label">Special Rituals</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-color workshop"></span>
+                        <span class="legend-label">Workshops & Retreats</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-color moon"></span>
+                        <span class="legend-label">Full/New Moon</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="upcoming-highlights">
+            <div class="container">
+                <h2 class="section-title">Upcoming Spiritual Highlights</h2>
+                <div class="highlights-cards">
+                    <div class="highlight-card">
+                        <div class="highlight-date">
+                            <span class="day">21</span>
+                            <span class="month">APR</span>
+                            <span class="year">2025</span>
+                        </div>
+                        <div class="highlight-details">
+                            <div class="highlight-tag festival">Festival</div>
+                            <h3>Hanuman Jayanti</h3>
+                            <p>Celebration of Lord Hanuman's birth with special puja, bhajans, and Sundarkand recitation.</p>
+                            <p class="highlight-time"><i class="far fa-clock"></i> 5:00 AM - 9:00 PM</p>
+                            <a href="programs.html" class="btn small-btn">Event Details</a>
+                        </div>
+                    </div>
+                    
+                    <div class="highlight-card">
+                        <div class="highlight-date">
+                            <span class="day">15</span>
+                            <span class="month">MAY</span>
+                            <span class="year">2025</span>
+                        </div>
+                        <div class="highlight-details">
+                            <div class="highlight-tag moon">Full Moon</div>
+                            <h3>Buddha Purnima</h3>
+                            <p>Full moon celebration with meditation on compassion, wisdom teachings, and lantern lighting ceremony.</p>
+                            <p class="highlight-time"><i class="far fa-clock"></i> 6:00 PM - 10:00 PM</p>
+                            <a href="programs.html" class="btn small-btn">Event Details</a>
+                        </div>
+                    </div>
+                    
+                    <div class="highlight-card">
+                        <div class="highlight-date">
+                            <span class="day">20</span>
+                            <span class="month">JUN</span>
+                            <span class="year">2025</span>
+                        </div>
+                        <div class="highlight-details">
+                            <div class="highlight-tag workshop">Workshop</div>
+                            <h3>Summer Solstice Retreat</h3>
+                            <p>Three-day intensive yoga and meditation retreat harnessting maximum solar energy for spiritual growth.</p>
+                            <p class="highlight-time"><i class="far fa-clock"></i> 20-22 June, Residential</p>
+                            <a href="programs.html" class="btn small-btn">Event Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="important-dates">
+            <div class="container">
+                <h2 class="section-title">Annual Sacred Festivals</h2>
+                <div class="dates-accordion">
+                    <div class="date-item">
+                        <div class="date-header">
+                            <h3>Maha Shivaratri <span class="month-indicator">February/March</span></h3>
+                            <div class="date-icon"><i class="fas fa-chevron-down"></i></div>
+                        </div>
+                        <div class="date-content">
+                            <div class="date-image">
+                                <img src="../images/calendar/shivaratri.jpg" alt="Maha Shivaratri">
+                            </div>
+                            <div class="date-details">
+                                <p>The great night of Lord Shiva, celebrated on the 13th night/14th day of the waning moon in the Hindu month of Phalguna. This is the most auspicious festival at our ashram, with 24-hour continuous chanting, special abhishekam ceremonies, and deep meditation practices.</p>
+                                <div class="date-highlights">
+                                    <div class="date-highlight">
+                                        <i class="fas fa-om"></i>
+                                        <span>108 Rudrabhishekam</span>
+                                    </div>
+                                    <div class="date-highlight">
+                                        <i class="fas fa-praying-hands"></i>
+                                        <span>Night-long Meditation</span>
+                                    </div>
+                                    <div class="date-highlight">
+                                        <i class="fas fa-fire-alt"></i>
+                                        <span>Sacred Havan</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="date-item">
+                        <div class="date-header">
+                            <h3>Navaratri <span class="month-indicator">September/October</span></h3>
+                            <div class="date-icon"><i class="fas fa-chevron-down"></i></div>
+                        </div>
+                        <div class="date-content">
+                            <div class="date-image">
+                                <img src="../images/calendar/navaratri.jpg" alt="Navaratri">
+                            </div>
+                            <div class="date-details">
+                                <p>Nine nights dedicated to the Divine Mother, celebrated in autumn. Each day honors a different aspect of the goddess. Our ashram conducts special pujas, bhajans, and spiritual discourses during this powerful time of shakti awakening.</p>
+                                <div class="date-highlights">
+                                    <div class="date-highlight">
+                                        <i class="fas fa-female"></i>
+                                        <span>Goddess Worship</span>
+                                    </div>
+                                    <div class="date-highlight">
+                                        <i class="fas fa-music"></i>
+                                        <span>Sacred Bhajans</span>
+                                    </div>
+                                    <div class="date-highlight">
+                                        <i class="fas fa-fan"></i>
+                                        <span>Garba Dance</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="date-item">
+                        <div class="date-header">
+                            <h3>Guru Purnima <span class="month-indicator">July</span></h3>
+                            <div class="date-icon"><i class="fas fa-chevron-down"></i></div>
+                        </div>
+                        <div class="date-content">
+                            <div class="date-image">
+                                <img src="../images/calendar/gurupurnima.jpg" alt="Guru Purnima">
+                            </div>
+                            <div class="date-details">
+                                <p>Full moon day dedicated to honoring spiritual teachers and the guru tradition. This day marks the beginning of the monsoon season when sages traditionally stayed in one place to teach disciples. We celebrate with guru puja, pada puja (washing of guru's feet), and special teachings.</p>
+                                <div class="date-highlights">
+                                    <div class="date-highlight">
+                                        <i class="fas fa-user-tie"></i>
+                                        <span>Guru Puja</span>
+                                    </div>
+                                    <div class="date-highlight">
+                                        <i class="fas fa-book"></i>
+                                        <span>Wisdom Teachings</span>
+                                    </div>
+                                    <div class="date-highlight">
+                                        <i class="fas fa-hands-wash"></i>
+                                        <span>Pada Puja</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="date-item">
+                        <div class="date-header">
+                            <h3>Krishna Janmashtami <span class="month-indicator">August/September</span></h3>
+                            <div class="date-icon"><i class="fas fa-chevron-down"></i></div>
+                        </div>
+                        <div class="date-content">
+                            <div class="date-image">
+                                <img src="../images/calendar/janmashtami.jpg" alt="Krishna Janmashtami">
+                            </div>
+                            <div class="date-details">
+                                <p>Celebration of Lord Krishna's birth, observed on the eighth day (Ashtami) of the dark fortnight in the month of Shravan. We celebrate with devotional singing, readings from the Bhagavad Gita, and meditation on Krishna's teachings of selfless action.</p>
+                                <div class="date-highlights">
+                                    <div class="date-highlight">
+                                        <i class="fas fa-baby"></i>
+                                        <span>Birth Celebration</span>
+                                    </div>
+                                    <div class="date-highlight">
+                                        <i class="fas fa-music"></i>
+                                        <span>Krishna Bhajans</span>
+                                    </div>
+                                    <div class="date-highlight">
+                                        <i class="fas fa-book-open"></i>
+                                        <span>Gita Discourse</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="date-item">
+                        <div class="date-header">
+                            <h3>Diwali <span class="month-indicator">October/November</span></h3>
+                            <div class="date-icon"><i class="fas fa-chevron-down"></i></div>
+                        </div>
+                        <div class="date-content">
+                            <div class="date-image">
+                                <img src="../images/calendar/diwali.jpg" alt="Diwali">
+                            </div>
+                            <div class="date-details">
+                                <p>Festival of lights symbolizing the victory of light over darkness. We celebrate with a special Lakshmi puja for abundance, lighting of lamps throughout the ashram, and meditation on the inner light that dispels ignorance.</p>
+                                <div class="date-highlights">
+                                    <div class="date-highlight">
+                                        <i class="fas fa-lamp"></i>
+                                        <span>Lamp Lighting</span>
+                                    </div>
+                                    <div class="date-highlight">
+                                        <i class="fas fa-coins"></i>
+                                        <span>Lakshmi Puja</span>
+                                    </div>
+                                    <div class="date-highlight">
+                                        <i class="fas fa-fire-alt"></i>
+                                        <span>Community Aarti</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="calendar-download">
+            <div class="container">
+                <h2 class="section-title">Download Our Calendar</h2>
+                <p class="section-description">Keep track of all our sacred events and plan your spiritual journey with our downloadable calendars.</p>
+                <div class="download-buttons">
+                    <a href="#" class="btn primary-btn"><i class="far fa-calendar-alt"></i> Download 2025 Calendar (PDF)</a>
+                    <a href="#" class="btn secondary-btn"><i class="fas fa-sync-alt"></i> Subscribe to Our Calendar Feed</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="../images/ashram-logo.png" alt="Shiva Shakti Ashram Logo">
+                <h3>Shiva Shakti Ashram</h3>
+                <p>A sacred space dedicated to Lord Shiva</p>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="programs.html">Programs</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-contact">
+                <h4>Contact Us</h4>
+                <p><i class="fas fa-map-marker-alt"></i> Pashupatinath Area, Kathmandu, Nepal</p>
+                <p><i class="fas fa-phone"></i> +977 1234 5678</p>
+                <p><i class="fas fa-envelope"></i> info@shivashaktiashram.org</p>
+            </div>
+            
+            <div class="footer-social">
+                <h4>Connect With Us</h4>
+                <div class="social-icons">
+                    <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-tiktok"></i></a>
+                </div>
+                <div class="newsletter">
+                    <h4>Subscribe to Our Newsletter</h4>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email address">
+                        <button type="submit" class="btn small-btn">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 Shiva Shakti Ashram. All Rights Reserved.</p>
+            <p>Designed with <i class="fas fa-om"></i> and devotion to Lord Shiva</p>
+        </div>
+    </footer>
+
+    <script src="../js/particles.min.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/calendar.js"></script>
+</body>
+</html> 

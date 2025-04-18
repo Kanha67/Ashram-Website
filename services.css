@@ -1,0 +1,243 @@
+.services-intro {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/main/shiva.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.service-card {
+    background: var(--card-bg);
+    border-radius: 15px;
+    padding: 2rem;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.service-card i {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.service-card h3 {
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+.service-card p {
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+}
+
+.service-form-section {
+    padding: 4rem 2rem;
+    background: var(--bg-secondary);
+}
+
+.form-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.form-title {
+    text-align: center;
+    color: var(--text-color);
+    margin-bottom: 2rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background: var(--input-bg);
+    color: var(--text-color);
+}
+
+.form-group textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.payment-section {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background: var(--bg-secondary);
+    border-radius: 8px;
+}
+
+.payment-options {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: var(--bg-secondary);
+    border-radius: 8px;
+}
+
+.card-payment-form,
+.esewa-payment-form {
+    margin-top: 1rem;
+}
+
+.form-row {
+    display: flex;
+    gap: 1rem;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+/* Card Number Formatting */
+#cardNumber {
+    letter-spacing: 1px;
+}
+
+/* Payment Processing */
+.payment-processing {
+    text-align: center;
+    padding: 2rem;
+}
+
+.payment-processing .spinner {
+    width: 50px;
+    height: 50px;
+    border: 3px solid var(--primary-color);
+    border-top-color: transparent;
+    border-radius: 50%;
+    margin: 1rem auto;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Payment Success */
+.payment-success {
+    text-align: center;
+    padding: 2rem;
+}
+
+.payment-success i {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.payment-success h3 {
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+.payment-success p {
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+}
+
+/* Payment Error */
+.payment-error {
+    background: var(--primary-light);
+    color: white;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    animation: slideIn 0.3s ease;
+}
+
+.payment-error i {
+    font-size: 1.2rem;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* QR Section */
+.qr-section {
+    margin-top: 2rem;
+    text-align: center;
+    padding: 1rem;
+    background: var(--bg-secondary);
+    border-radius: 8px;
+}
+
+/* Dark Mode Styles */
+.dark-mode .payment-options {
+    background: var(--dark-bg-secondary);
+}
+
+.dark-mode .qr-section {
+    background: var(--dark-bg-secondary);
+}
+
+.dark-mode .payment-processing .spinner {
+    border-color: var(--primary-light);
+    border-top-color: transparent;
+}
+
+.dark-mode .payment-success i {
+    color: var(--primary-light);
+}
+
+.dark-mode .payment-error {
+    background: var(--primary-light);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    .payment-options {
+        padding: 1rem;
+    }
+    
+    .qr-section img {
+        max-width: 150px;
+    }
+} 

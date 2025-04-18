@@ -1,0 +1,529 @@
+/**
+ * Shiva Shakti Ashram - Contact Page Styles
+ * Includes styles for contact form, info sections, map, and FAQ accordion
+ */
+
+/* Page Banner */
+.page-banner {
+    position: relative;
+    height: 300px;
+    background: linear-gradient(rgba(17, 17, 51, 0.7), rgba(17, 17, 51, 0.7)),
+                url('../images/banner-contact.jpg') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.dark-mode .page-banner {
+    background: linear-gradient(rgba(0, 0, 30, 0.8), rgba(0, 0, 30, 0.8)),
+                url('../images/banner-contact.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+.page-banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(72, 61, 139, 0.3), rgba(0, 102, 204, 0.3));
+    z-index: 1;
+    pointer-events: none;
+}
+
+.banner-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+.banner-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 15px;
+    color: #ffd700;
+    text-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+}
+
+.banner-content h2 {
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 20px;
+    position: relative;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.banner-content h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(to right, #ff8a00, #ffd700);
+    margin: 15px auto 0;
+    border-radius: 3px;
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+/* Contact Intro */
+.contact-intro {
+    padding: 0 20px 50px;
+    text-align: center;
+}
+
+.intro-text {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #333;
+}
+
+.dark-mode .intro-text {
+    color: #e0e0e0;
+}
+
+/* Contact Details Section */
+.contact-details {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+}
+
+.dark-mode .contact-details {
+    background-color: #121236;
+}
+
+.contact-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-info {
+    flex: 1;
+    min-width: 300px;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-left: 5px solid #483d8b;
+}
+
+.dark-mode .contact-info {
+    background-color: #1a1a4d;
+    border-left-color: #6a5acd;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    color: #e0e0e0;
+}
+
+.contact-info h3 {
+    color: #483d8b;
+    font-size: 1.2rem;
+    margin: 25px 0 10px;
+    display: flex;
+    align-items: center;
+}
+
+.dark-mode .contact-info h3 {
+    color: #a297ff;
+}
+
+.contact-info h3:first-child {
+    margin-top: 0;
+}
+
+.contact-info h3 i {
+    margin-right: 10px;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #483d8b;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 0.8rem;
+}
+
+.dark-mode .contact-info h3 i {
+    background-color: #6a5acd;
+}
+
+.contact-info p {
+    margin: 0 0 20px 35px;
+    line-height: 1.8;
+    color: #555;
+}
+
+.dark-mode .contact-info p {
+    color: #c0c0c0;
+}
+
+.social-connect {
+    margin-top: 30px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin: 15px 0 0 35px;
+}
+
+.social-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: #483d8b;
+    color: #fff;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.dark-mode .social-icons a {
+    background-color: #6a5acd;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.social-icons a:hover {
+    transform: translateY(-5px);
+    background-color: #ffd700;
+    color: #333;
+    box-shadow: 0 10px 20px rgba(255, 215, 0, 0.3);
+}
+
+.dark-mode .social-icons a:hover {
+    background-color: #ffd700;
+    color: #333;
+}
+
+/* Contact Form */
+.contact-form-container {
+    flex: 1.5;
+    min-width: 300px;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.dark-mode .contact-form-container {
+    background-color: #1a1a4d;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.contact-form-container h3 {
+    color: #483d8b;
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+    text-align: center;
+    position: relative;
+}
+
+.dark-mode .contact-form-container h3 {
+    color: #a297ff;
+}
+
+.contact-form-container h3::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(to right, #483d8b, #6a5acd);
+    margin: 15px auto 0;
+    border-radius: 3px;
+}
+
+.dark-mode .contact-form-container h3::after {
+    background: linear-gradient(to right, #6a5acd, #a297ff);
+}
+
+.contact-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.form-group {
+    flex: calc(50% - 10px);
+    margin-bottom: 20px;
+}
+
+.form-group.full-width {
+    flex: 100%;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: 500;
+}
+
+.dark-mode .form-group label {
+    color: #e0e0e0;
+}
+
+.form-group .required {
+    color: #ff3b30;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+.dark-mode .form-group input,
+.dark-mode .form-group select,
+.dark-mode .form-group textarea {
+    background-color: #252550;
+    border-color: #303070;
+    color: #e0e0e0;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #6a5acd;
+    box-shadow: 0 0 0 3px rgba(106, 90, 205, 0.2);
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.checkbox-group input[type="checkbox"] {
+    width: auto;
+    margin-right: 10px;
+}
+
+.form-button {
+    flex: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.form-button button {
+    padding: 12px 30px;
+    font-size: 1.1rem;
+}
+
+/* Map Section */
+.location-map {
+    padding: 60px 20px;
+}
+
+.map-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.dark-mode .map-container {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* FAQ Section */
+.faq-section {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+}
+
+.dark-mode .faq-section {
+    background-color: #121236;
+}
+
+.faq-container {
+    max-width: 900px;
+    margin: 30px auto 0;
+}
+
+.faq-item {
+    background-color: #fff;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+}
+
+.dark-mode .faq-item {
+    background-color: #1a1a4d;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 25px;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+}
+
+.faq-question h3 {
+    font-size: 1.1rem;
+    color: #333;
+    margin: 0;
+    flex: 1;
+}
+
+.dark-mode .faq-question h3 {
+    color: #e0e0e0;
+}
+
+.faq-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    color: #483d8b;
+    transition: all 0.3s ease;
+}
+
+.dark-mode .faq-icon {
+    color: #a297ff;
+}
+
+.faq-item.active .faq-icon {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s ease;
+    padding: 0 25px;
+}
+
+.faq-item.active .faq-answer {
+    height: auto;
+    padding: 0 25px 20px;
+}
+
+.faq-answer p {
+    margin: 0;
+    color: #555;
+    line-height: 1.7;
+}
+
+.dark-mode .faq-answer p {
+    color: #c0c0c0;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .banner-content h1 {
+        font-size: 3rem;
+    }
+
+    .banner-content h2 {
+        font-size: 2rem;
+    }
+    
+    .contact-wrapper {
+        flex-direction: column;
+    }
+    
+    .contact-info, 
+    .contact-form-container {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-banner {
+        height: 250px;
+    }
+    
+    .banner-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .banner-content h2 {
+        font-size: 1.8rem;
+    }
+    
+    .form-group {
+        flex: 100%;
+    }
+    
+    .contact-info,
+    .contact-form-container {
+        padding: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .banner-content h1 {
+        font-size: 2rem;
+    }
+    
+    .banner-content h2 {
+        font-size: 1.5rem;
+    }
+    
+    .contact-info h3 {
+        font-size: 1.1rem;
+    }
+    
+    .contact-form-container h3 {
+        font-size: 1.3rem;
+    }
+    
+    .social-icons {
+        flex-wrap: wrap;
+    }
+    
+    .faq-question h3 {
+        font-size: 1rem;
+    }
+}
+
+/* Animation for form elements */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.contact-form .form-group {
+    animation: fadeInUp 0.6s ease forwards;
+    opacity: 0;
+}
+
+.contact-form .form-group:nth-child(1) { animation-delay: 0.1s; }
+.contact-form .form-group:nth-child(2) { animation-delay: 0.2s; }
+.contact-form .form-group:nth-child(3) { animation-delay: 0.3s; }
+.contact-form .form-group:nth-child(4) { animation-delay: 0.4s; }
+.contact-form .form-group:nth-child(5) { animation-delay: 0.5s; }
+.contact-form .form-group:nth-child(6) { animation-delay: 0.6s; }
+.contact-form .form-button { animation-delay: 0.7s; } 

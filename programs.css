@@ -1,0 +1,831 @@
+/* Programs Page Styles */
+
+/* Page Banner */
+.page-banner {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/banner-programs.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    position: relative;
+}
+
+.page-banner .sanskrit-heading {
+    font-family: 'Tiro Devanagari Sanskrit', serif;
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.page-banner h2 {
+    font-size: 2rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Programs Intro Section */
+.programs-intro {
+    padding: 4rem 0;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.programs-intro .section-title {
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+.programs-intro .intro-text {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #666;
+}
+
+/* Featured Programs Section */
+.featured-programs {
+    padding: 4rem 0;
+    background-color: #fff;
+}
+
+.featured-slider {
+    position: relative;
+    margin-top: 2rem;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.featured-slide {
+    display: none;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.featured-slide.active {
+    display: flex;
+    flex-direction: column;
+}
+
+.featured-image {
+    height: 400px;
+    overflow: hidden;
+}
+
+.featured-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.featured-slide:hover .featured-image img {
+    transform: scale(1.05);
+}
+
+.featured-content {
+    padding: 2rem;
+    background-color: #fff;
+}
+
+.program-meta {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.program-meta i {
+    margin-right: 0.5rem;
+    color: #8e44ad;
+}
+
+.featured-content h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.featured-content p {
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+    color: #666;
+}
+
+.program-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
+.detail-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #666;
+}
+
+.detail-item i {
+    color: #8e44ad;
+}
+
+.slider-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+    gap: 1rem;
+}
+
+.slider-btn {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    color: #8e44ad;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.slider-btn:hover {
+    color: #6c3483;
+}
+
+.slider-indicators {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ddd;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.indicator.active {
+    background-color: #8e44ad;
+}
+
+/* Program Categories Section */
+.program-categories {
+    padding: 4rem 0;
+    background-color: #f9f9f9;
+}
+
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.category-card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.category-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1.5rem;
+    background-color: #f0e6f5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.category-icon i {
+    font-size: 2rem;
+    color: #8e44ad;
+}
+
+.category-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.category-card p {
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    color: #666;
+}
+
+.category-programs {
+    list-style: none;
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.category-programs li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #eee;
+    color: #666;
+}
+
+.category-programs li:last-child {
+    border-bottom: none;
+}
+
+/* Upcoming Workshops Section */
+.upcoming-workshops {
+    padding: 4rem 0;
+    background-color: #fff;
+}
+
+.workshops-timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 3rem auto;
+}
+
+.workshops-timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 100%;
+    background-color: #8e44ad;
+}
+
+.workshop-item {
+    display: flex;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.workshop-item:nth-child(odd) {
+    flex-direction: row-reverse;
+}
+
+.workshop-date {
+    width: 100px;
+    text-align: center;
+    padding: 1rem;
+    background-color: #8e44ad;
+    color: #fff;
+    border-radius: 10px;
+    position: relative;
+    z-index: 1;
+}
+
+.workshop-date .day {
+    font-size: 1.8rem;
+    font-weight: 700;
+    display: block;
+}
+
+.workshop-date .month {
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+.workshop-details {
+    flex: 1;
+    padding: 1.5rem;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    margin: 0 2rem;
+    position: relative;
+}
+
+.workshop-details::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 20px;
+    height: 20px;
+    background-color: #8e44ad;
+    border-radius: 50%;
+}
+
+.workshop-item:nth-child(odd) .workshop-details::before {
+    left: -30px;
+    transform: translateY(-50%);
+}
+
+.workshop-item:nth-child(even) .workshop-details::before {
+    right: -30px;
+    transform: translateY(-50%);
+}
+
+.workshop-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.workshop-header h3 {
+    font-size: 1.4rem;
+    color: #333;
+}
+
+.workshop-time {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.workshop-time i {
+    margin-right: 0.5rem;
+    color: #8e44ad;
+}
+
+.workshop-location {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    color: #666;
+}
+
+.workshop-location i {
+    color: #8e44ad;
+}
+
+.workshop-description {
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    color: #666;
+}
+
+.workshop-meta {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
+}
+
+.workshop-teacher, .workshop-price {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #666;
+}
+
+.workshop-teacher i, .workshop-price i {
+    color: #8e44ad;
+}
+
+.view-all-workshops {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+/* Program Testimonials Section */
+.program-testimonials {
+    padding: 4rem 0;
+    background-color: #f9f9f9;
+}
+
+.testimonials-slider {
+    position: relative;
+    margin-top: 2rem;
+    overflow: hidden;
+}
+
+.testimonial-slide {
+    display: none;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.testimonial-slide.active {
+    display: block;
+}
+
+.testimonial-content {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.quote-icon {
+    position: absolute;
+    top: -20px;
+    left: 20px;
+    width: 40px;
+    height: 40px;
+    background-color: #8e44ad;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+.testimonial-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #666;
+    margin-bottom: 1.5rem;
+    font-style: italic;
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.testimonial-author img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.author-info h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0.2rem;
+    color: #333;
+}
+
+.author-info p {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.testimonial-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+    gap: 1rem;
+}
+
+.testimonial-btn {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    color: #8e44ad;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.testimonial-btn:hover {
+    color: #6c3483;
+}
+
+.testimonial-indicators {
+    display: flex;
+    gap: 0.5rem;
+}
+
+/* Registration Info Section */
+.registration-info {
+    padding: 4rem 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/registration-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+}
+
+.registration-content {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.registration-text {
+    flex: 1;
+}
+
+.registration-text h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.registration-text p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    opacity: 0.9;
+}
+
+.registration-benefits {
+    list-style: none;
+}
+
+.registration-benefits li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.8rem;
+    font-size: 1.1rem;
+}
+
+.registration-benefits li i {
+    color: #8e44ad;
+}
+
+.registration-form {
+    flex: 1;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 2rem;
+    backdrop-filter: blur(10px);
+}
+
+.registration-form h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #333;
+    font-size: 1rem;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.form-note {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    opacity: 0.8;
+    text-align: center;
+}
+
+/* FAQ Section */
+.faq-section {
+    padding: 4rem 0;
+    background-color: #fff;
+}
+
+.faq-accordion {
+    max-width: 800px;
+    margin: 2rem auto 0;
+}
+
+.faq-item {
+    margin-bottom: 1rem;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.faq-question {
+    padding: 1.5rem;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.faq-question:hover {
+    background-color: #f0e6f5;
+}
+
+.faq-question h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin: 0;
+}
+
+.faq-toggle {
+    color: #8e44ad;
+    transition: transform 0.3s ease;
+}
+
+.faq-item.active .faq-toggle {
+    transform: rotate(45deg);
+}
+
+.faq-answer {
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.faq-item.active .faq-answer {
+    padding: 1.5rem;
+    max-height: 500px;
+}
+
+.faq-answer p {
+    line-height: 1.6;
+    color: #666;
+    margin: 0;
+}
+
+/* Dark Mode Styles */
+body.dark-mode .programs-intro,
+body.dark-mode .program-categories,
+body.dark-mode .program-testimonials {
+    background-color: #1a1a1a;
+}
+
+body.dark-mode .featured-content,
+body.dark-mode .category-card,
+body.dark-mode .workshop-details,
+body.dark-mode .testimonial-content,
+body.dark-mode .faq-question {
+    background-color: #2a2a2a;
+}
+
+body.dark-mode .featured-content h3,
+body.dark-mode .category-card h3,
+body.dark-mode .workshop-header h3,
+body.dark-mode .testimonial-author h4,
+body.dark-mode .faq-question h3 {
+    color: #fff;
+}
+
+body.dark-mode .featured-content p,
+body.dark-mode .category-card p,
+body.dark-mode .workshop-description,
+body.dark-mode .testimonial-text,
+body.dark-mode .faq-answer p,
+body.dark-mode .program-meta,
+body.dark-mode .detail-item,
+body.dark-mode .workshop-time,
+body.dark-mode .workshop-location,
+body.dark-mode .workshop-meta,
+body.dark-mode .workshop-teacher,
+body.dark-mode .workshop-price,
+body.dark-mode .author-info p {
+    color: #ccc;
+}
+
+body.dark-mode .program-details {
+    background-color: #333;
+}
+
+body.dark-mode .category-programs li {
+    border-bottom-color: #444;
+}
+
+body.dark-mode .workshop-meta {
+    border-top-color: #444;
+}
+
+body.dark-mode .faq-item {
+    border-color: #444;
+}
+
+body.dark-mode .faq-question:hover {
+    background-color: #333;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .featured-slide {
+        flex-direction: column;
+    }
+    
+    .featured-image {
+        height: 300px;
+    }
+    
+    .registration-content {
+        flex-direction: column;
+    }
+    
+    .workshops-timeline::before {
+        left: 0;
+    }
+    
+    .workshop-item,
+    .workshop-item:nth-child(odd) {
+        flex-direction: column;
+    }
+    
+    .workshop-details {
+        margin: 1rem 0 1rem 2rem;
+    }
+    
+    .workshop-item:nth-child(odd) .workshop-details::before,
+    .workshop-item:nth-child(even) .workshop-details::before {
+        left: -30px;
+        right: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-banner {
+        height: 250px;
+    }
+    
+    .page-banner .sanskrit-heading {
+        font-size: 2.5rem;
+    }
+    
+    .page-banner h2 {
+        font-size: 1.5rem;
+    }
+    
+    .featured-image {
+        height: 250px;
+    }
+    
+    .program-details {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .workshop-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+    
+    .workshop-meta {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-banner {
+        height: 200px;
+    }
+    
+    .page-banner .sanskrit-heading {
+        font-size: 2rem;
+    }
+    
+    .page-banner h2 {
+        font-size: 1.2rem;
+    }
+    
+    .featured-image {
+        height: 200px;
+    }
+    
+    .featured-content h3 {
+        font-size: 1.5rem;
+    }
+    
+    .workshop-date {
+        width: 80px;
+    }
+    
+    .workshop-date .day {
+        font-size: 1.5rem;
+    }
+    
+    .workshop-date .month {
+        font-size: 0.9rem;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+} 

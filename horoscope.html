@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horoscope - Shiva Shakti Ashram</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="../css/horoscope.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Sanskrit:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-particles" id="particles"></div>
+    
+    <header>
+        <div class="logo">
+            <img src="../logo.jpg" alt="Shiva Shakti Ashram Logo">
+            <h1>Shiva Shakti Ashram</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="programs.html">Programs</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-controls">
+            <button id="donate-btn" class="btn">Donate</button>
+            <button id="lang-toggle" class="lang-toggle">
+                <span data-lang="en">EN</span>
+                <span data-lang="np">ने</span>
+            </button>
+            <button id="theme-toggle" class="theme-toggle">
+                <i class="fas fa-sun"></i>
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-banner parallax">
+            <h1>Daily Horoscope</h1>
+            <p>Discover your daily cosmic guidance</p>
+        </section>
+
+        <section class="calendar-section">
+            <div class="calendar-container">
+                <div class="calendar-header">
+                    <div class="today-date">
+                        <div class="current-date">
+                            <!-- Will be populated by JavaScript -->
+                        </div>
+                        <div class="current-tithi">
+                            <!-- Will be populated by JavaScript -->
+                        </div>
+                    </div>
+                    <div class="date-converter">
+                        <h3 data-translate="date-converter">Date Converter</h3>
+                        <div class="converter-form">
+                            <div class="conversion-type">
+                                <button class="active" data-type="adtobs">AD to BS</button>
+                                <button data-type="bstoad">BS to AD</button>
+                            </div>
+                            <div class="conversion-inputs adtobs">
+                                <div class="input-group">
+                                    <label data-translate="year">Year</label>
+                                    <input type="number" id="ad-year" placeholder="YYYY">
+                                </div>
+                                <div class="input-group">
+                                    <label data-translate="month">Month</label>
+                                    <input type="number" id="ad-month" min="1" max="12" placeholder="MM">
+                                </div>
+                                <div class="input-group">
+                                    <label data-translate="day">Day</label>
+                                    <input type="number" id="ad-day" min="1" max="31" placeholder="DD">
+                                </div>
+                                <button class="convert-btn" data-translate="convert">Convert</button>
+                            </div>
+                            <div class="conversion-inputs bstoad" style="display: none;">
+                                <div class="input-group">
+                                    <label data-translate="bs-year">BS Year</label>
+                                    <input type="number" id="bs-year" placeholder="YYYY">
+                                </div>
+                                <div class="input-group">
+                                    <label data-translate="bs-month">BS Month</label>
+                                    <input type="number" id="bs-month" min="1" max="12" placeholder="MM">
+                                </div>
+                                <div class="input-group">
+                                    <label data-translate="bs-day">BS Day</label>
+                                    <input type="number" id="bs-day" min="1" max="32" placeholder="DD">
+                                </div>
+                                <button class="convert-btn" data-translate="convert">Convert</button>
+                            </div>
+                            <div class="conversion-result">
+                                <!-- Will be populated by JavaScript -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="calendar-events">
+                    <!-- Will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <section class="horoscope-grid">
+            <!-- Horoscope cards will be populated by JavaScript -->
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="../logo.jpg" alt="Shiva Shakti Ashram Logo">
+                <p>Shiva Shakti Ashram</p>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="programs.html">Programs</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Location: Kathmandu, Nepal</p>
+                <p><i class="fas fa-phone"></i> Phone: +977-1-4444444</p>
+                <p><i class="fas fa-envelope"></i> Email: info@shivashaktiashram.com</p>
+            </div>
+            <div class="footer-social">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Shiva Shakti Ashram. All rights reserved. <i class="fas fa-om"></i></p>
+        </div>
+    </footer>
+
+    <!-- Audio Player -->
+    <div class="audio-player">
+        <audio id="background-music" loop>
+            <source src="../audio/meditation-music.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <button id="audio-toggle" class="audio-toggle">
+            <i class="fas fa-volume-up"></i>
+        </button>
+    </div>
+
+    <!-- Scripts -->
+    <script src="../js/nepali-date.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/animations.js"></script>
+    <script src="../js/horoscope.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+</body>
+</html> 

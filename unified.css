@@ -1,0 +1,493 @@
+/**
+ * Shiva Shakti Ashram - Unified Styles for All Pages (Except Homepage)
+ * This file ensures consistent styling across all pages
+ */
+
+:root {
+    /* Base Colors */
+    --primary-color: #8B0000; /* Dark Red */
+    --primary-light: #FF0000; /* Bright Red */
+    --primary-dark: #4B0000; /* Deep Red */
+    --secondary-color: #FFD700; /* Gold */
+    --accent-color: #FF4500; /* Orange Red */
+    
+    /* Background Colors */
+    --bg-primary: #FFFFFF; /* White */
+    --bg-secondary: #F5F5F5; /* Light Gray */
+    --bg-tertiary: #000000; /* Black */
+    
+    /* Text Colors */
+    --text-color: #000000; /* Black */
+    --text-secondary: #333333; /* Dark Gray */
+    --text-light: #FFFFFF; /* White */
+    --text-muted: #666666; /* Medium Gray */
+    
+    /* Card Colors */
+    --card-bg: #FFFFFF; /* White */
+    --card-shadow: rgba(139, 0, 0, 0.1); /* Red Shadow */
+    
+    /* Border Colors */
+    --border-color: #E0E0E0; /* Light Gray */
+    --border-dark: #8B0000; /* Dark Red */
+    
+    /* Input Colors */
+    --input-bg: #FFFFFF; /* White */
+    --input-border: #8B0000; /* Dark Red */
+    --input-focus: #FF0000; /* Bright Red */
+    
+    /* Button Colors */
+    --btn-primary-bg: #8B0000; /* Dark Red */
+    --btn-primary-hover: #4B0000; /* Deep Red */
+    --btn-secondary-bg: #FFFFFF; /* White */
+    --btn-secondary-hover: #F5F5F5; /* Light Gray */
+    
+    /* Navigation Colors */
+    --nav-bg: #FFFFFF; /* White */
+    --nav-text: #000000; /* Black */
+    --nav-hover: #8B0000; /* Dark Red */
+    --nav-active: #4B0000; /* Deep Red */
+    
+    /* Footer Colors */
+    --footer-bg: #000000; /* Black */
+    --footer-text: #FFFFFF; /* White */
+    --footer-link: #FFD700; /* Gold */
+    
+    /* Animation Colors */
+    --glow-color: rgba(255, 0, 0, 0.5); /* Red Glow */
+    --hover-lift: 0 5px 15px rgba(139, 0, 0, 0.2); /* Red Shadow */
+
+    /* Dark Mode Colors */
+    --dark-bg-primary: #1A0000; /* Deep Dark Red */
+    --dark-bg-secondary: #2A0000; /* Slightly Lighter Dark Red */
+    --dark-bg-tertiary: #0A0000; /* Darkest Red */
+    --dark-text-primary: #FFFFFF; /* White */
+    --dark-text-secondary: #FFE5E5; /* Light Red */
+    --dark-text-accent: #FFD700; /* Gold */
+    --dark-border: #4B0000; /* Dark Red Border */
+    --dark-shadow: rgba(139, 0, 0, 0.3); /* Red Shadow */
+    --dark-glow: rgba(255, 0, 0, 0.2); /* Red Glow */
+}
+
+/* ===== BACKGROUND COLORS ===== */
+body {
+    background-color: var(--background);
+    color: var(--text-dark);
+}
+
+body.dark-mode {
+    background-color: var(--dark-bg-primary);
+    color: var(--dark-text-primary);
+}
+
+/* ===== PAGE BANNER ===== */
+.page-banner {
+    background: linear-gradient(rgba(75, 0, 130, 0.7), rgba(75, 0, 130, 0.7)), url('../images/banner-about.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.dark-mode .page-banner {
+    background: linear-gradient(rgba(26, 0, 0, 0.8), rgba(26, 0, 0, 0.8)), url('../images/banner-about.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+/* ===== SECTION BACKGROUNDS ===== */
+section {
+    background-color: var(--background);
+    padding: 4rem 0;
+}
+
+.dark-mode section {
+    background-color: var(--dark-bg-secondary);
+    border-top: 1px solid var(--dark-border);
+    border-bottom: 1px solid var(--dark-border);
+}
+
+/* ===== CARD BACKGROUNDS ===== */
+.card, 
+.event-card, 
+.quick-link-card, 
+.practice-card, 
+.testimonial-card,
+.timeline-content {
+    background-color: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.dark-mode .card, 
+.dark-mode .event-card, 
+.dark-mode .quick-link-card, 
+.dark-mode .practice-card, 
+.dark-mode .testimonial-card,
+.dark-mode .timeline-content {
+    background-color: var(--dark-bg-tertiary);
+    border: 1px solid var(--dark-border);
+    box-shadow: 0 5px 15px var(--dark-shadow);
+    color: var(--dark-text-secondary);
+}
+
+.dark-mode .card:hover,
+.dark-mode .event-card:hover,
+.dark-mode .quick-link-card:hover {
+    box-shadow: 0 8px 25px var(--dark-shadow);
+    transform: translateY(-5px);
+}
+
+/* ===== FOOTER BACKGROUND ===== */
+footer {
+    background-color: var(--primary);
+    color: var(--text-light);
+}
+
+.dark-mode footer {
+    background-color: var(--dark-bg-tertiary);
+    border-top: 2px solid var(--dark-border);
+}
+
+/* ===== HEADER BACKGROUND ===== */
+header {
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.dark-mode header {
+    background-color: var(--dark-bg-secondary);
+    border-bottom: 1px solid var(--dark-border);
+    box-shadow: 0 2px 10px var(--dark-shadow);
+}
+
+/* ===== PARTICLE BACKGROUND ===== */
+.background-particles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.3;
+}
+
+.dark-mode .background-particles {
+    opacity: 0.2;
+}
+
+/* ===== FORM ELEMENTS ===== */
+input, 
+textarea, 
+select {
+    background-color: white;
+    color: var(--text-dark);
+    border: 1px solid #ddd;
+}
+
+.dark-mode input, 
+.dark-mode textarea, 
+.dark-mode select {
+    background-color: var(--dark-bg-tertiary);
+    color: var(--dark-text-primary);
+    border: 1px solid var(--dark-border);
+}
+
+/* ===== MODAL BACKGROUNDS ===== */
+.modal-content {
+    background-color: white;
+}
+
+.dark-mode .modal-content {
+    background-color: var(--dark-bg-tertiary);
+    border: 1px solid var(--dark-border);
+    box-shadow: 0 5px 15px var(--dark-shadow);
+}
+
+/* ===== TABLE BACKGROUNDS ===== */
+table {
+    background-color: white;
+}
+
+.dark-mode table {
+    background-color: var(--dark-bg-tertiary);
+    border: 1px solid var(--dark-border);
+}
+
+/* ===== ACCORDION BACKGROUNDS ===== */
+.accordion-item {
+    background-color: white;
+}
+
+.dark-mode .accordion-item {
+    background-color: var(--dark-bg-tertiary);
+    border: 1px solid var(--dark-border);
+}
+
+/* ===== TABS BACKGROUNDS ===== */
+.tab-content {
+    background-color: white;
+}
+
+.dark-mode .tab-content {
+    background-color: var(--dark-bg-tertiary);
+    border: 1px solid var(--dark-border);
+}
+
+/* ===== GALLERY ITEM BACKGROUNDS ===== */
+.gallery-item {
+    background-color: white;
+}
+
+.dark-mode .gallery-item {
+    background-color: var(--dark-bg-tertiary);
+    border: 1px solid var(--dark-border);
+}
+
+/* ===== DONATION FORM BACKGROUNDS ===== */
+.donation-form {
+    background-color: white;
+}
+
+.dark-mode .donation-form {
+    background-color: var(--dark-bg-tertiary);
+    border: 1px solid var(--dark-border);
+}
+
+/* ===== CONTACT FORM BACKGROUNDS ===== */
+.contact-form {
+    background-color: white;
+}
+
+.dark-mode .contact-form {
+    background-color: var(--dark-bg-tertiary);
+    border: 1px solid var(--dark-border);
+}
+
+/* ===== PROGRAMS LIST BACKGROUNDS ===== */
+.program-item {
+    background-color: white;
+}
+
+.dark-mode .program-item {
+    background-color: var(--dark-bg-tertiary);
+    border: 1px solid var(--dark-border);
+}
+
+/* ===== GOAL SECTION BACKGROUNDS ===== */
+.goal-section {
+    background-color: white;
+}
+
+.dark-mode .goal-section {
+    background-color: var(--dark-bg-tertiary);
+    border: 1px solid var(--dark-border);
+}
+
+/* Update specific elements to match new theme */
+.btn.primary-btn {
+    background: var(--btn-primary-bg);
+    color: var(--text-light);
+    border: 2px solid var(--btn-primary-bg);
+}
+
+.btn.primary-btn:hover {
+    background: var(--btn-primary-hover);
+    border-color: var(--btn-primary-hover);
+}
+
+.btn.secondary-btn {
+    background: var(--btn-secondary-bg);
+    color: var(--text-color);
+    border: 2px solid var(--border-dark);
+}
+
+.btn.secondary-btn:hover {
+    background: var(--btn-secondary-hover);
+    border-color: var(--primary-color);
+}
+
+.service-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-dark);
+    box-shadow: var(--hover-lift);
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(139, 0, 0, 0.2);
+}
+
+.form-container {
+    background: var(--card-bg);
+    border: 1px solid var(--border-dark);
+    box-shadow: 0 5px 15px rgba(139, 0, 0, 0.1);
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: var(--input-focus);
+    box-shadow: 0 0 0 2px rgba(255, 0, 0, 0.1);
+}
+
+.payment-section {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-dark);
+}
+
+.services-btn {
+    background: var(--primary-color);
+    color: var(--text-light);
+}
+
+.services-btn:hover {
+    background: var(--primary-dark);
+}
+
+/* Update footer styling */
+footer {
+    background: var(--footer-bg);
+    color: var(--footer-text);
+}
+
+.footer-links a {
+    color: var(--footer-text);
+}
+
+.footer-links a:hover {
+    color: var(--footer-link);
+}
+
+.footer-social .social-icons a {
+    color: var(--footer-text);
+}
+
+.footer-social .social-icons a:hover {
+    color: var(--footer-link);
+}
+
+/* Update navigation styling */
+nav ul li a {
+    color: var(--nav-text);
+}
+
+nav ul li a:hover {
+    color: var(--nav-hover);
+}
+
+nav ul li a.active {
+    color: var(--nav-active);
+}
+
+/* Update theme toggle colors */
+.theme-toggle {
+    background: var(--bg-primary);
+    border: 1px solid var(--border-dark);
+}
+
+.theme-toggle .toggle-ball {
+    background: var(--primary-color);
+}
+
+/* Update language toggle colors */
+.language-toggle button {
+    background: var(--bg-primary);
+    color: var(--text-color);
+    border: 1px solid var(--border-dark);
+}
+
+.language-toggle button.active {
+    background: var(--primary-color);
+    color: var(--text-light);
+}
+
+/* Dark Mode Button Styles */
+.dark-mode .btn.primary-btn {
+    background: var(--primary-color);
+    color: var(--dark-text-primary);
+    border: 2px solid var(--primary-light);
+}
+
+.dark-mode .btn.primary-btn:hover {
+    background: var(--primary-light);
+    border-color: var(--primary-color);
+}
+
+.dark-mode .btn.secondary-btn {
+    background: var(--dark-bg-tertiary);
+    color: var(--dark-text-primary);
+    border: 2px solid var(--primary-color);
+}
+
+.dark-mode .btn.secondary-btn:hover {
+    background: var(--primary-color);
+    border-color: var(--primary-light);
+}
+
+/* Dark Mode Navigation */
+.dark-mode nav ul li a {
+    color: var(--dark-text-secondary);
+}
+
+.dark-mode nav ul li a:hover {
+    color: var(--primary-light);
+}
+
+.dark-mode nav ul li a.active {
+    color: var(--primary-light);
+    border-bottom: 2px solid var(--primary-light);
+}
+
+/* Dark Mode Footer */
+.dark-mode .footer-links a {
+    color: var(--dark-text-secondary);
+}
+
+.dark-mode .footer-links a:hover {
+    color: var(--primary-light);
+}
+
+.dark-mode .footer-social .social-icons a {
+    color: var(--dark-text-secondary);
+}
+
+.dark-mode .footer-social .social-icons a:hover {
+    color: var(--primary-light);
+}
+
+/* Dark Mode Theme Toggle */
+.dark-mode .theme-toggle {
+    background: var(--dark-bg-tertiary);
+    border: 1px solid var(--dark-border);
+}
+
+.dark-mode .theme-toggle .toggle-ball {
+    background: var(--primary-light);
+}
+
+/* Dark Mode Language Toggle */
+.dark-mode .language-toggle button {
+    background: var(--dark-bg-tertiary);
+    color: var(--dark-text-secondary);
+    border: 1px solid var(--dark-border);
+}
+
+.dark-mode .language-toggle button.active {
+    background: var(--primary-color);
+    color: var(--dark-text-primary);
+}
+
+/* Dark Mode Animations */
+.dark-mode .glow {
+    text-shadow: 0 0 10px var(--dark-glow);
+}
+
+.dark-mode .hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dark-mode .hover-lift:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px var(--dark-shadow);
+} 

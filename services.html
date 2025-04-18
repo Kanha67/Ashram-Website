@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - Shiva Shakti Ashram</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/unified.css">
+    <link rel="stylesheet" href="../css/services.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Sanskrit:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-particles" id="particles"></div>
+
+    <header>
+        <div class="language-toggle">
+            <button class="active" data-lang="en">EN</button>
+            <button data-lang="np">NP</button>
+        </div>
+        
+        <div class="theme-toggle">
+            <i class="fas fa-moon"></i>
+            <i class="fas fa-sun"></i>
+            <div class="toggle-ball"></div>
+        </div>
+        
+        <div class="logo">
+            <img src="../logo.jpg" alt="Shiva Shakti Ashram Logo">
+            <h1>Shiva Shakti Ashram</h1>
+        </div>
+        
+        <nav>
+            <ul>
+                <li><a href="../index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="about.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+                <li><a href="goal.html"><i class="fas fa-bullseye"></i> Our Goal</a></li>
+                <li><a href="programs.html"><i class="fas fa-calendar-alt"></i> Programs</a></li>
+                <li><a href="gallery.html"><i class="fas fa-images"></i> Gallery</a></li>
+                <li><a href="contact.html"><i class="fas fa-phone"></i> Contact</a></li>
+                <li><a href="services.html" class="active services-btn"><i class="fas fa-hands-helping"></i> Our Services</a></li>
+            </ul>
+            <div class="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="services-intro">
+            <h1 class="section-title">Our Sacred Services</h1>
+            <p class="section-description">Experience divine blessings through our traditional rituals and ceremonies</p>
+        </section>
+
+        <section class="services-grid">
+            <div class="service-card card-3d">
+                <div class="card-3d-inner">
+                    <i class="fas fa-sun"></i>
+                    <h3>Graha Shanti</h3>
+                    <p>Planetary peace rituals to harmonize celestial influences</p>
+                    <button class="btn primary-btn hover-scale" onclick="showForm('graha-shanti')">Book Service</button>
+                </div>
+            </div>
+            <div class="service-card card-3d">
+                <div class="card-3d-inner">
+                    <i class="fas fa-praying-hands"></i>
+                    <h3>Pitri Yagya</h3>
+                    <p>Ancestral rituals for peace and blessings of forefathers</p>
+                    <button class="btn primary-btn hover-scale" onclick="showForm('pitri-yagya')">Book Service</button>
+                </div>
+            </div>
+            <div class="service-card card-3d">
+                <div class="card-3d-inner">
+                    <i class="fas fa-om"></i>
+                    <h3>Dev Yagya</h3>
+                    <p>Divine ceremonies for spiritual elevation</p>
+                    <button class="btn primary-btn hover-scale" onclick="showForm('dev-yagya')">Book Service</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="service-form-section" id="service-form">
+            <div class="form-container">
+                <h2 class="form-title">Service Request Form</h2>
+                <form id="serviceRequestForm" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="serviceType">Service Type</label>
+                        <select id="serviceType" name="serviceType" required>
+                            <option value="">Select Service</option>
+                            <option value="graha-shanti">Graha Shanti</option>
+                            <option value="pitri-yagya">Pitri Yagya</option>
+                            <option value="dev-yagya">Dev Yagya</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="pitriName">Pitri Name (if applicable)</label>
+                        <input type="text" id="pitriName" name="pitriName">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="pitriBhakta">Pitri Bhakta Name</label>
+                        <input type="text" id="pitriBhakta" name="pitriBhakta" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="gotra">Gotra</label>
+                        <input type="text" id="gotra" name="gotra" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="dob">Date of Birth</label>
+                        <input type="date" id="dob" name="dob" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="address">Address</label>
+                        <textarea id="address" name="address" required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="documents">Upload Documents (if any)</label>
+                        <input type="file" id="documents" name="documents" multiple>
+                    </div>
+
+                    <div class="payment-section">
+                        <h3>Payment Method</h3>
+                        <div class="payment-options">
+                            <label class="payment-option">
+                                <input type="radio" name="paymentMethod" value="bank" required>
+                                <span>Bank Transfer</span>
+                            </label>
+                            <label class="payment-option">
+                                <input type="radio" name="paymentMethod" value="esewa" required>
+                                <span>eSewa</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn primary-btn hover-scale">Submit Request</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="../logo.jpg" alt="Shiva Shakti Ashram Logo">
+                <h3>Shiva Shakti Ashram</h3>
+                <p>A sacred space dedicated to Lord Shiva</p>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="programs.html">Programs</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-contact">
+                <h4>Contact Us</h4>
+                <p><i class="fas fa-map-marker-alt"></i> Pashupatinath Area, Kathmandu, Nepal</p>
+                <p><i class="fas fa-phone"></i> +977 1234 5678</p>
+                <p><i class="fas fa-envelope"></i> info@shivashaktiashram.org</p>
+            </div>
+            
+            <div class="footer-social">
+                <h4>Connect With Us</h4>
+                <div class="social-icons">
+                    <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 Shiva Shakti Ashram. All Rights Reserved.</p>
+            <p>Designed with <i class="fas fa-om"></i> and devotion to Lord Shiva</p>
+        </div>
+    </footer>
+
+    <script src="../js/particles.min.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/services.js"></script>
+</body>
+</html> 

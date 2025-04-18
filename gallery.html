@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Shiva Shakti Ashram</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/unified.css">
+    <link rel="stylesheet" href="../css/gallery.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Sanskrit:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-particles" id="particles"></div>
+    
+    <header>
+        <div class="language-toggle">
+            <button class="active" data-lang="en">EN</button>
+            <button data-lang="np">NP</button>
+        </div>
+        
+        <div class="theme-toggle">
+            <i class="fas fa-moon"></i>
+            <i class="fas fa-sun"></i>
+            <div class="toggle-ball"></div>
+        </div>
+        
+        <div class="logo">
+            <img src="../logo.jpg" alt="Shiva Shakti Ashram Logo">
+            <h1>Shiva Shakti Ashram</h1>
+        </div>
+        
+        <nav>
+            <ul>
+                <li><a href="../index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="about.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+                <li><a href="goal.html"><i class="fas fa-bullseye"></i> Our Goal</a></li>
+                <li><a href="programs.html"><i class="fas fa-calendar-alt"></i> Programs</a></li>
+                <li><a href="gallery.html" class="active"><i class="fas fa-images"></i> Gallery</a></li>
+                <li><a href="contact.html"><i class="fas fa-phone"></i> Contact</a></li>
+                <li><a href="donate.html" class="donate-btn"><i class="fas fa-heart"></i> Donate</a></li>
+            </ul>
+            <div class="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-banner">
+            <div class="banner-content">
+                <h1 class="sanskrit-heading">गैलरी</h1>
+                <h2>Sacred Moments Gallery</h2>
+            </div>
+        </section>
+
+        <section class="gallery-intro">
+            <div class="container">
+                <h2 class="section-title">Glimpses of Divine Energy</h2>
+                <p class="intro-text">Explore the visual journey of Shiva Shakti Ashram through our collection of sacred moments, spiritual ceremonies, and divine connections. Each image captures the essence of our spiritual practices and the transformative energy of Lord Shiva.</p>
+            </div>
+        </section>
+
+        <section class="gallery-filter">
+            <div class="container">
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="rituals">Sacred Rituals</button>
+                    <button class="filter-btn" data-filter="events">Festivals & Events</button>
+                    <button class="filter-btn" data-filter="ashram">Ashram Life</button>
+                    <button class="filter-btn" data-filter="nature">Divine Nature</button>
+                    <button class="filter-btn" data-filter="meditation">Meditation</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="gallery-grid">
+            <div class="container">
+                <div class="masonry-grid">
+                    <!-- Sacred Rituals -->
+                    <div class="gallery-item rituals">
+                        <div class="gallery-image">
+                            <img src="../images/gallery/ritual-1.jpg" alt="Rudrabhishekam Ceremony">
+                            <div class="gallery-overlay">
+                                <div class="overlay-content">
+                                    <h3>Rudrabhishekam Ceremony</h3>
+                                    <p>Special abhishekam to Lord Shiva</p>
+                                    <button class="view-image-btn"><i class="fas fa-search-plus"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item rituals">
+                        <div class="gallery-image">
+                            <img src="../images/gallery/ritual-2.jpg" alt="Havan Ceremony">
+                            <div class="gallery-overlay">
+                                <div class="overlay-content">
+                                    <h3>Sacred Havan</h3>
+                                    <p>Fire ceremony for purification</p>
+                                    <button class="view-image-btn"><i class="fas fa-search-plus"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item rituals">
+                        <div class="gallery-image">
+                            <img src="../images/gallery/ritual-3.jpg" alt="Aarti Ceremony">
+                            <div class="gallery-overlay">
+                                <div class="overlay-content">
+                                    <h3>Evening Aarti</h3>
+                                    <p>Offering of light to Lord Shiva</p>
+                                    <button class="view-image-btn"><i class="fas fa-search-plus"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Festivals & Events -->
+                    <div class="gallery-item events">
+                        <div class="gallery-image">
+                            <img src="../images/gallery/event-1.jpg" alt="Maha Shivaratri Celebration">
+                            <div class="gallery-overlay">
+                                <div class="overlay-content">
+                                    <h3>Maha Shivaratri</h3>
+                                    <p>The great night of Lord Shiva</p>
+                                    <button class="view-image-btn"><i class="fas fa-search-plus"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item events">
+                        <div class="gallery-image">
+                            <img src="../images/gallery/event-2.jpg" alt="Guru Purnima Celebration">
+                            <div class="gallery-overlay">
+                                <div class="overlay-content">
+                                    <h3>Guru Purnima</h3>
+                                    <p>Honoring the spiritual teachers</p>
+                                    <button class="view-image-btn"><i class="fas fa-search-plus"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item events">
+                        <div class="gallery-image">
+                            <img src="../images/gallery/event-3.jpg" alt="Navaratri Celebration">
+                            <div class="gallery-overlay">
+                                <div class="overlay-content">
+                                    <h3>Navaratri Festival</h3>
+                                    <p>Nine nights celebrating divine energy</p>
+                                    <button class="view-image-btn"><i class="fas fa-search-plus"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Ashram Life -->
+                    <div class="gallery-item ashram">
+                        <div class="gallery-image">
+                            <img src="../images/gallery/ashram-1.jpg" alt="Morning Prayer">
+                            <div class="gallery-overlay">
+                                <div class="overlay-content">
+                                    <h3>Morning Prayer</h3>
+                                    <p>Daily spiritual gathering at dawn</p>
+                                    <button class="view-image-btn"><i class="fas fa-search-plus"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item ashram">
+                        <div class="gallery-image">
+                            <img src="../images/gallery/ashram-2.jpg" alt="Communal Dining">
+                            <div class="gallery-overlay">
+                                <div class="overlay-content">
+                                    <h3>Prasad Distribution</h3>
+                                    <p>Blessed food shared with devotees</p>
+                                    <button class="view-image-btn"><i class="fas fa-search-plus"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item ashram">
+                        <div class="gallery-image">
+                            <img src="../images/gallery/ashram-3.jpg" alt="Temple Cleaning">
+                            <div class="gallery-overlay">
+                                <div class="overlay-content">
+                                    <h3>Seva (Selfless Service)</h3>
+                                    <p>Devotees maintaining sacred spaces</p>
+                                    <button class="view-image-btn"><i class="fas fa-search-plus"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Divine Nature -->
+                    <div class="gallery-item nature">
+                        <div class="gallery-image">
+                            <img src="../images/gallery/nature-1.jpg" alt="Ashram Garden">
+                            <div class="gallery-overlay">
+                                <div class="overlay-content">
+                                    <h3>Sacred Garden</h3>
+                                    <p>Medicinal and spiritual plants</p>
+                                    <button class="view-image-btn"><i class="fas fa-search-plus"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item nature">
+                        <div class="gallery-image">
+                            <img src="../images/gallery/nature-2.jpg" alt="Sacred River">
+                            <div class="gallery-overlay">
+                                <div class="overlay-content">
+                                    <h3>Riverside Meditation</h3>
+                                    <p>Connecting with water element</p>
+                                    <button class="view-image-btn"><i class="fas fa-search-plus"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item nature">
+                        <div class="gallery-image">
+                            <img src="../images/gallery/nature-3.jpg" alt="Himalayan View">
+                            <div class="gallery-overlay">
+                                <div class="overlay-content">
+                                    <h3>Himalayan Connection</h3>
+                                    <p>The abode of Lord Shiva</p>
+                                    <button class="view-image-btn"><i class="fas fa-search-plus"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Meditation -->
+                    <div class="gallery-item meditation">
+                        <div class="gallery-image">
+                            <img src="../images/gallery/meditation-1.jpg" alt="Group Meditation">
+                            <div class="gallery-overlay">
+                                <div class="overlay-content">
+                                    <h3>Group Meditation</h3>
+                                    <p>Collective consciousness raising</p>
+                                    <button class="view-image-btn"><i class="fas fa-search-plus"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item meditation">
+                        <div class="gallery-image">
+                            <img src="../images/gallery/meditation-2.jpg" alt="Yogic Practices">
+                            <div class="gallery-overlay">
+                                <div class="overlay-content">
+                                    <h3>Kundalini Awakening</h3>
+                                    <p>Advanced spiritual practices</p>
+                                    <button class="view-image-btn"><i class="fas fa-search-plus"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item meditation">
+                        <div class="gallery-image">
+                            <img src="../images/gallery/meditation-3.jpg" alt="Sunrise Meditation">
+                            <div class="gallery-overlay">
+                                <div class="overlay-content">
+                                    <h3>Sunrise Meditation</h3>
+                                    <p>Connecting with solar energy</p>
+                                    <button class="view-image-btn"><i class="fas fa-search-plus"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="lightbox">
+            <div class="lightbox-content">
+                <button class="lightbox-close"><i class="fas fa-times"></i></button>
+                <button class="lightbox-prev"><i class="fas fa-chevron-left"></i></button>
+                <div class="lightbox-image-container">
+                    <img src="" alt="" class="lightbox-image">
+                    <div class="lightbox-caption">
+                        <h3></h3>
+                        <p></p>
+                    </div>
+                </div>
+                <button class="lightbox-next"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+
+        <section class="video-gallery">
+            <div class="container">
+                <h2 class="section-title">Sacred Video Collection</h2>
+                <div class="video-grid">
+                    <div class="video-item">
+                        <div class="video-thumbnail">
+                            <img src="../images/gallery/video-thumb-1.jpg" alt="Rudrabhishekam Ceremony">
+                            <div class="play-button">
+                                <i class="fas fa-play"></i>
+                            </div>
+                            <div class="video-overlay">
+                                <h3>Rudrabhishekam Ceremony</h3>
+                                <p>Duration: 8:45</p>
+                            </div>
+                        </div>
+                        <div class="video-embed" data-src="https://www.youtube.com/embed/placeholder1"></div>
+                    </div>
+                    
+                    <div class="video-item">
+                        <div class="video-thumbnail">
+                            <img src="../images/gallery/video-thumb-2.jpg" alt="Maha Shivaratri Celebration">
+                            <div class="play-button">
+                                <i class="fas fa-play"></i>
+                            </div>
+                            <div class="video-overlay">
+                                <h3>Maha Shivaratri Celebration</h3>
+                                <p>Duration: 12:30</p>
+                            </div>
+                        </div>
+                        <div class="video-embed" data-src="https://www.youtube.com/embed/placeholder2"></div>
+                    </div>
+                    
+                    <div class="video-item">
+                        <div class="video-thumbnail">
+                            <img src="../images/gallery/video-thumb-3.jpg" alt="Guided Meditation Session">
+                            <div class="play-button">
+                                <i class="fas fa-play"></i>
+                            </div>
+                            <div class="video-overlay">
+                                <h3>Guided Meditation Session</h3>
+                                <p>Duration: 15:20</p>
+                            </div>
+                        </div>
+                        <div class="video-embed" data-src="https://www.youtube.com/embed/placeholder3"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="submit-photos">
+            <div class="container">
+                <h2 class="section-title">Share Your Experience</h2>
+                <p class="section-description">Have you captured special moments at our ashram? Share your photos with us and they might be featured in our gallery.</p>
+                <a href="contact.html" class="btn primary-btn">Submit Your Photos</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="../images/ashram-logo.png" alt="Shiva Shakti Ashram Logo">
+                <h3>Shiva Shakti Ashram</h3>
+                <p>A sacred space dedicated to Lord Shiva</p>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="programs.html">Programs</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-contact">
+                <h4>Contact Us</h4>
+                <p><i class="fas fa-map-marker-alt"></i> Pashupatinath Area, Kathmandu, Nepal</p>
+                <p><i class="fas fa-phone"></i> +977 1234 5678</p>
+                <p><i class="fas fa-envelope"></i> info@shivashaktiashram.org</p>
+            </div>
+            
+            <div class="footer-social">
+                <h4>Connect With Us</h4>
+                <div class="social-icons">
+                    <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-tiktok"></i></a>
+                </div>
+                <div class="newsletter">
+                    <h4>Subscribe to Our Newsletter</h4>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email address">
+                        <button type="submit" class="btn small-btn">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 Shiva Shakti Ashram. All Rights Reserved.</p>
+            <p>Designed with <i class="fas fa-om"></i> and devotion to Lord Shiva</p>
+        </div>
+    </footer>
+
+    <script src="../js/particles.min.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/gallery.js"></script>
+</body>
+</html> 

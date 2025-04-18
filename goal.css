@@ -1,0 +1,675 @@
+/**
+ * Shiva Shakti Ashram - Our Goal Page Styles
+ */
+
+/* ===== PAGE BANNER ===== */
+.page-banner {
+    background: linear-gradient(rgba(75, 0, 130, 0.7), rgba(75, 0, 130, 0.7)), url('../images/banner-goal.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.dark-mode .page-banner {
+    background: linear-gradient(rgba(13, 13, 13, 0.8), rgba(13, 13, 13, 0.8)), url('../images/banner-goal.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.page-banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../images/trishul-pattern.png');
+    opacity: 0.1;
+    animation: float 20s linear infinite;
+}
+
+.banner-content {
+    text-align: center;
+    color: white;
+    z-index: 2;
+    padding: 0 20px;
+}
+
+.banner-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    color: #FFA500;
+    text-shadow: 0 0 10px rgba(255, 165, 0, 0.5);
+}
+
+.banner-content h2 {
+    font-size: 2.5rem;
+    font-weight: 500;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 15px;
+}
+
+.banner-content h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #FFA500, transparent);
+}
+
+/* ===== VISION MISSION SECTION ===== */
+.vision-mission {
+    padding: 5rem 5%;
+}
+
+.vision-container,
+.mission-container {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    max-width: 1200px;
+    margin: 0 auto 4rem;
+}
+
+.mission-container {
+    flex-direction: row-reverse;
+    margin-bottom: 0;
+}
+
+.vision-text, 
+.mission-text {
+    flex: 1.2;
+}
+
+.vision-image, 
+.mission-image {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.vision-image img, 
+.mission-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.vision-image:hover img, 
+.mission-image:hover img {
+    transform: scale(1.05);
+}
+
+.image-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(75, 0, 130, 0.8));
+    padding: 20px;
+    color: white;
+    text-align: center;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.dark-mode .image-overlay {
+    background: linear-gradient(transparent, rgba(93, 138, 168, 0.8));
+}
+
+.vision-image:hover .image-overlay, 
+.mission-image:hover .image-overlay {
+    transform: translateY(0);
+}
+
+.image-overlay span {
+    font-family: 'Tiro Devanagari Sanskrit', serif;
+    font-size: 1.5rem;
+}
+
+.goal-text-box {
+    background: white;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+    margin-top: 2rem;
+}
+
+.dark-mode .goal-text-box {
+    background: #1a1a1a;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.goal-icon {
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+    box-shadow: 0 5px 15px rgba(75, 0, 130, 0.3);
+}
+
+.dark-mode .goal-icon {
+    background: var(--accent);
+}
+
+.goal-text-box p {
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+}
+
+.goal-text-box p:last-child {
+    margin-bottom: 0;
+}
+
+/* ===== CORE VALUES SECTION ===== */
+.core-values {
+    padding: 5rem 5%;
+    background: rgba(75, 0, 130, 0.05);
+    text-align: center;
+}
+
+.dark-mode .core-values {
+    background: rgba(13, 13, 13, 0.8);
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 3rem auto 0;
+}
+
+.value-card {
+    background: white;
+    border-radius: 10px;
+    padding: 2.5rem 2rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.dark-mode .value-card {
+    background: #1a1a1a;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.value-card::before {
+    content: '';
+    position: absolute;
+    top: -100%;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, transparent, rgba(255, 165, 0, 0.2), transparent);
+    transition: all 0.6s ease;
+}
+
+.value-card:hover {
+    transform: translateY(-10px);
+}
+
+.value-card:hover::before {
+    top: 100%;
+    left: 100%;
+}
+
+.value-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1.5rem;
+    background: var(--primary);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    box-shadow: 0 5px 15px rgba(75, 0, 130, 0.3);
+    transition: all 0.3s ease;
+}
+
+.dark-mode .value-icon {
+    background: var(--accent);
+}
+
+.value-card:hover .value-icon {
+    background: var(--highlight);
+    transform: rotateY(180deg);
+}
+
+.value-card h3 {
+    color: var(--primary);
+    margin-bottom: 1rem;
+    font-family: 'Tiro Devanagari Sanskrit', serif;
+}
+
+.dark-mode .value-card h3 {
+    color: var(--accent);
+}
+
+.value-card p {
+    line-height: 1.6;
+}
+
+/* ===== SPIRITUAL PILLARS SECTION ===== */
+.spiritual-pillars {
+    padding: 5rem 5%;
+    text-align: center;
+}
+
+.pillar-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    max-width: 800px;
+    margin: 2rem auto;
+}
+
+.pillar-tab {
+    padding: 1rem 2rem;
+    background: white;
+    border: 2px solid var(--primary);
+    border-radius: 30px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--primary);
+    transition: all 0.3s ease;
+}
+
+.dark-mode .pillar-tab {
+    background: transparent;
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+.pillar-tab i {
+    font-size: 1.2rem;
+}
+
+.pillar-tab.active,
+.pillar-tab:hover {
+    background: var(--primary);
+    color: white;
+}
+
+.dark-mode .pillar-tab.active,
+.dark-mode .pillar-tab:hover {
+    background: var(--accent);
+    color: var(--dark-bg);
+}
+
+.pillar-content-container {
+    max-width: 1000px;
+    margin: 3rem auto 0;
+    position: relative;
+}
+
+.pillar-content {
+    display: none;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.dark-mode .pillar-content {
+    background: #1a1a1a;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.pillar-content.active {
+    display: flex;
+    animation: fadeIn 0.5s ease forwards;
+}
+
+.pillar-image {
+    flex: 1;
+    min-height: 400px;
+}
+
+.pillar-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.pillar-text {
+    flex: 1.5;
+    padding: 2.5rem;
+    text-align: left;
+}
+
+.pillar-text h3 {
+    color: var(--primary);
+    font-family: 'Tiro Devanagari Sanskrit', serif;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.dark-mode .pillar-text h3 {
+    color: var(--accent);
+}
+
+.pillar-text h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background: var(--highlight);
+}
+
+.pillar-text p {
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+.pillar-text ul {
+    margin-bottom: 1.5rem;
+    padding-left: 1.5rem;
+}
+
+.pillar-text ul li {
+    margin-bottom: 0.8rem;
+    position: relative;
+    list-style-type: none;
+}
+
+.pillar-text ul li::before {
+    content: '';
+    position: absolute;
+    left: -1.5rem;
+    top: 0.5rem;
+    width: 8px;
+    height: 8px;
+    background: var(--highlight);
+    border-radius: 50%;
+}
+
+/* ===== COMMUNITY OUTREACH SECTION ===== */
+.community-outreach {
+    padding: 5rem 5%;
+    background: rgba(93, 138, 168, 0.1);
+    text-align: center;
+}
+
+.dark-mode .community-outreach {
+    background: rgba(13, 13, 13, 0.8);
+}
+
+.outreach-intro {
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.outreach-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.outreach-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.dark-mode .outreach-card {
+    background: #1a1a1a;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.outreach-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.outreach-image {
+    height: 200px;
+    overflow: hidden;
+}
+
+.outreach-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.outreach-card:hover .outreach-image img {
+    transform: scale(1.1);
+}
+
+.outreach-text {
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.outreach-text h3 {
+    color: var(--primary);
+    margin-bottom: 1rem;
+    font-family: 'Tiro Devanagari Sanskrit', serif;
+}
+
+.dark-mode .outreach-text h3 {
+    color: var(--accent);
+}
+
+.outreach-text p {
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+/* ===== JOIN MISSION SECTION ===== */
+.join-mission {
+    padding: 5rem 5%;
+    text-align: center;
+    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('../images/join-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.dark-mode .join-mission {
+    background: linear-gradient(rgba(13, 13, 13, 0.9), rgba(13, 13, 13, 0.9)), url('../images/join-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.join-content {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 3rem auto 0;
+}
+
+.join-text {
+    flex: 1.5;
+    text-align: left;
+}
+
+.join-text p {
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+
+.join-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.join-quote {
+    flex: 1;
+    background: var(--primary);
+    color: white;
+    border-radius: 10px;
+    padding: 2.5rem;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(75, 0, 130, 0.3);
+}
+
+.dark-mode .join-quote {
+    background: var(--accent);
+    box-shadow: 0 10px 30px rgba(93, 138, 168, 0.3);
+}
+
+.join-quote blockquote {
+    font-family: 'Tiro Devanagari Sanskrit', serif;
+    font-size: 1.3rem;
+    line-height: 1.8;
+    position: relative;
+    padding: 0 0 2rem 0;
+    border: none;
+    margin: 0;
+    color: white;
+}
+
+.join-quote blockquote::before {
+    content: '"';
+    font-size: 4rem;
+    position: absolute;
+    top: -20px;
+    left: -10px;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.join-quote cite {
+    display: block;
+    margin-top: 1rem;
+    font-style: normal;
+    font-weight: 500;
+    text-align: right;
+    font-size: 1rem;
+}
+
+/* ===== RESPONSIVE STYLES ===== */
+@media (max-width: 1024px) {
+    .vision-container,
+    .mission-container,
+    .join-content {
+        flex-direction: column;
+        gap: 3rem;
+    }
+    
+    .vision-image, 
+    .mission-image {
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    
+    .pillar-content {
+        flex-direction: column;
+    }
+    
+    .pillar-image {
+        min-height: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-banner {
+        height: 300px;
+    }
+    
+    .banner-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .banner-content h2 {
+        font-size: 1.8rem;
+    }
+    
+    .pillar-tabs {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .pillar-tab {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .values-grid,
+    .outreach-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .goal-text-box {
+        padding: 1.5rem;
+    }
+    
+    .pillar-text {
+        padding: 1.5rem;
+    }
+    
+    .join-buttons {
+        flex-direction: column;
+    }
+    
+    .join-quote {
+        padding: 1.5rem;
+    }
+    
+    .join-quote blockquote {
+        font-size: 1.1rem;
+    }
+}
+
+/* ===== JAVASCRIPT CONTROLLED STYLES ===== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+} 
