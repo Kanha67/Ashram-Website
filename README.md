@@ -1,4 +1,4 @@
-# Shiva Shakti Ashram Website
+# Religious Website idea
 
 A beautifully designed, fully responsive, multi-page spiritual website for Shiva Shakti Ashram, a sacred center dedicated to Lord Shiva.
 
@@ -103,5 +103,6 @@ Tested and working in:
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 ---
+
 
 Created with devotion to Lord Shiva 🕉️ 
